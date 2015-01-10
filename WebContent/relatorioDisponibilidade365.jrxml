@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<queryString>
+		<![CDATA[SELECT 
+*
+FROM
+
+PdfDisponibilidade365 pdf365, pdfdisponibilidaderelatorio pdfr
+
+
+WHERE
+
+	pdfr.idPdfDisponibilidade=pdf365.idPdfDisponibilidadeRelatorio]]>
+	</queryString>
+	<field name="idPdfDisponibilidade365" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataFim365" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dataInicio365" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="modo365" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="total365" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idPdfDisponibilidadeRelatorio" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="idPdfDisponibilidade" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nome" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="porcentual" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tempoAnualDisponivel" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tempoMensalDisponivel" class="java.lang.Double">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="59">
+			<staticText>
+				<reportElement x="19" y="12" width="502" height="43"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Falhas dos últimos 365 dias]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="5"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="5"/>
+	</columnHeader>
+	<detail>
+		<band height="114">
+			<staticText>
+				<reportElement x="312" y="90" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="90" width="137" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Porcentual de Inatividade :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="70" width="137" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tempo Anual Disponivel :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="30" width="39" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="30" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Inicio :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="70" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Modo Status:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="23" y="50" width="137" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tempo Mensal Disponivel:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="312" y="50" width="100" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data Final:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="62" y="30" width="250" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="162" y="89" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{porcentual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="70" width="124" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{tempoAnualDisponivel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="50" width="132" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{tempoMensalDisponivel}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="50" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{dataFim365}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="30" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{dataInicio365}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="70" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{modo365}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="421" y="89" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.Double"><![CDATA[$F{total365}]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="19" y="109" width="502" height="1"/>
+			</line>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="6"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="6"/>
+	</pageFooter>
+	<summary>
+		<band height="6"/>
+	</summary>
+</jasperReport>

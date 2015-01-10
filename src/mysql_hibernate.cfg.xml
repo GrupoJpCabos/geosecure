@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+    <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+    <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/geosecure</property>
+    <property name="hibernate.connection.username">root</property>
+    <property name="hibernate.connection.password"></property>
+    
+<!--     	  <property name="hibernate.show_sql">true</property>  -->
+
+
+   <property name="hibernate.hbm2ddl.auto">update</property>
+
+
+
+    <mapping class="br.com.geosecure.entity.PdfAcionamentoUsuario" />
+    <mapping class="br.com.geosecure.entity.PdfPluviometrico" />
+    <mapping class="br.com.geosecure.entity.PdfDisponibilidadeRelatorio" />
+    <mapping class="br.com.geosecure.entity.PdfDisponibilidade365" />
+    <mapping class="br.com.geosecure.entity.PdfDisponibilidade30" />
+    
+    <mapping class="br.com.geosecure.entity.Estacao" />
+    <mapping class="br.com.geosecure.entity.AcessoEstacao" />
+    <mapping class="br.com.geosecure.entity.GrupoEstacao" />
+    <mapping class="br.com.geosecure.entity.TipoEstacao" />
+    <mapping class="br.com.geosecure.entity.EnderecoEstacao" />
+    
+    
+    <mapping class="br.com.geosecure.entity.StatusEstacao" />
+    <mapping class="br.com.geosecure.entity.StatusEstacaoHistorico" />
+    <mapping class="br.com.geosecure.entity.ModoStatusEstacao" />
+    <mapping class="br.com.geosecure.entity.ToqueStatusEstacao" />
+    <mapping class="br.com.geosecure.entity.DisponibilidadeStatusEstacao" />
+    <mapping class="br.com.geosecure.entity.ContinuoStatusEstacao" />
+    <mapping class="br.com.geosecure.entity.ContinuoStatusEstacaoHistorico" />
+    <mapping class="br.com.geosecure.entity.ContinuoGlobalStatusEstacao" />
+    
+    
+    <mapping class="br.com.geosecure.entity.Usuario" />
+    <mapping class="br.com.geosecure.entity.LoginHistorico"/>
+    <mapping class="br.com.geosecure.entity.NivelUsuario"/>
+    <mapping class="br.com.geosecure.entity.AcaoHistorico"/>
+    
+    <mapping class="br.com.geosecure.entity.Pluviometro" />
+    <mapping class="br.com.geosecure.entity.PluviometroHistoricoLeitura" />
+    <mapping class="br.com.geosecure.entity.PluviometroHistoricoLeituraCrescente" />
+    <mapping class="br.com.geosecure.entity.PluviometroHistoricoConvertido" />
+    
+    
+    <mapping class="br.com.geosecure.entity.UltimoCheck"/>
+    
+    
+    
+
+
+ </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+
+<!DOCTYPE faces-config PUBLIC
+  "-//Sun Microsystems, Inc.//DTD JavaServer Faces Config 1.1//EN"
+  "http://java.sun.com/dtd/web-facesconfig_1_1.dtd">
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config>
+
+<managed-bean>
+<managed-bean-name>eBean</managed-bean-name>
+<managed-bean-class>br.com.geosecure.managed.EstacaoBean</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+<managed-bean-name>geBean</managed-bean-name>
+<managed-bean-class>br.com.geosecure.managed.GrupoEstacaoBean</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+
+<managed-bean>
+<managed-bean-name>teBean</managed-bean-name>
+<managed-bean-class>br.com.geosecure.managed.TipoEstacaoBean</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>acBean</managed-bean-name>
+	<managed-bean-class>br.com.geosecure.managed.AcionamentoBean</managed-bean-class>
+	<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+<managed-bean-name>rdpBean</managed-bean-name>
+<managed-bean-class>br.com.geosecure.managed.ReceiveDataPluv</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+<managed-bean-name>uBean</managed-bean-name>
+<managed-bean-class>br.com.geosecure.managed.UsuarioBean</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+<managed-bean-name>pBean</managed-bean-name>
+<managed-bean-class>br.com.geosecure.managed.PluviometroBean</managed-bean-class>
+<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>admBean</managed-bean-name>
+	<managed-bean-class>br.com.geosecure.managed.AdminBean</managed-bean-class>
+	<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>nvBean</managed-bean-name>
+	<managed-bean-class>br.com.geosecure.managed.NivelUsuarioBean</managed-bean-class>
+	<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>seBean</managed-bean-name>
+	<managed-bean-class>br.com.geosecure.managed.StatusEstacaoBean</managed-bean-class>
+	<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>rpBean</managed-bean-name>
+	<managed-bean-class>br.com.geosecure.managed.RelatorioPluviometroBean</managed-bean-class>
+	<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>ruBean</managed-bean-name>
+	<managed-bean-class>br.com.geosecure.managed.RelatorioUsuarioBean</managed-bean-class>
+	<managed-bean-scope>request</managed-bean-scope>
+</managed-bean>
+
+<managed-bean>
+	<managed-bean-name>rdBean</managed-bean-name>
+	<managed-bean-class>br.com.geosecure.managed.RelatorioDisponibilidadeBean</managed-bean-class>
+	<managed-bean-scope>request</managed-bean-scope> 
+</managed-bean>
+
+</faces-config>
